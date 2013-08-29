@@ -11043,8 +11043,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="GND26" gate="1" x="50.8" y="68.58"/>
 <instance part="S1" gate="1" x="35.56" y="76.2" rot="R270"/>
 <instance part="GND3" gate="1" x="2.54" y="38.1"/>
-<instance part="GND4" gate="1" x="96.52" y="78.74"/>
-<instance part="SUPPLY5" gate="G$1" x="96.52" y="83.82" rot="R270"/>
+<instance part="GND4" gate="1" x="104.14" y="91.44"/>
+<instance part="SUPPLY5" gate="G$1" x="93.98" y="96.52"/>
 </instances>
 <busses>
 </busses>
@@ -11120,11 +11120,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="43.18" y1="43.18" x2="63.5" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GPSCONN" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="81.28" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="U$2" gate="G$1" pin="GND1"/>
 <wire x1="20.32" y1="40.64" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
@@ -11149,6 +11144,11 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pinref part="GND26" gate="1" pin="GND"/>
 <pinref part="S1" gate="1" pin="S1"/>
 <pinref part="S1" gate="1" pin="S"/>
+</segment>
+<segment>
+<pinref part="GPSCONN" gate="G$1" pin="6"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="86.36" y1="93.98" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="3">
@@ -11319,11 +11319,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="48.26" y1="38.1" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GPSCONN" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="83.82" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="SUPPLY5" gate="G$1" pin="5V"/>
-</segment>
-<segment>
 <pinref part="C1" gate="G$1" pin="+"/>
 <pinref part="SUPPLY1" gate="G$1" pin="5V"/>
 <wire x1="33.02" y1="157.48" x2="33.02" y2="154.94" width="0.1524" layer="91"/>
@@ -11333,29 +11328,35 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pinref part="SUPPLY4" gate="G$1" pin="5V"/>
 <wire x1="91.44" y1="142.24" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="GPSVBAT" class="0">
 <segment>
 <pinref part="GPSCONN" gate="G$1" pin="5"/>
-<wire x1="86.36" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
-<label x="91.44" y="91.44" size="1.778" layer="95"/>
+<wire x1="86.36" y1="91.44" x2="93.98" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="G$1" pin="5V"/>
+<wire x1="93.98" y1="91.44" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
 </segment>
+</net>
+<net name="GPSVBAT" class="0">
 <segment>
 <wire x1="121.92" y1="91.44" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <label x="116.84" y="99.06" size="1.778" layer="95"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="GPSCONN" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="83.82" x2="91.44" y2="83.82" width="0.1524" layer="91"/>
+<label x="91.44" y="83.82" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPSPWRCTRL" class="0">
-<segment>
-<pinref part="GPSCONN" gate="G$1" pin="6"/>
-<wire x1="86.36" y1="93.98" x2="91.44" y2="93.98" width="0.1524" layer="91"/>
-<label x="91.44" y="93.98" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="35.56" x2="12.7" y2="35.56" width="0.1524" layer="91"/>
 <label x="5.08" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="GPSCONN" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
+<label x="91.44" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RFTX" class="0">
